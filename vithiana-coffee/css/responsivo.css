@@ -1,0 +1,88 @@
+/* =====================================================================
+   VITHIANA COFFEE — css/responsivo.css
+   Regras para telas maiores. O style.css já é o visual do celular (360px);
+   aqui só ACRESCENTAMOS o que muda em tablet (>= 600px) e desktop (>= 992px).
+   Técnica: media queries com min-width (mobile-first).
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   TABLET — a partir de 600px
+   --------------------------------------------------------------------- */
+@media (min-width: 600px) {
+  .grade-produtos { grid-template-columns: repeat(2, 1fr); }      /* 2 colunas */
+  .grade-links { grid-template-columns: repeat(2, 1fr); }
+  .grade-cartoes { grid-template-columns: repeat(2, 1fr); }
+  .filtros { grid-template-columns: 2fr 1fr; align-items: end; }
+  .galeria-grade { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .carrossel { aspect-ratio: 16 / 9; }
+  .rodape-grade { grid-template-columns: repeat(2, 1fr); }
+  .form-contato, .contato-info { padding: 2rem; }
+  .logo img { height: 56px; }
+  .logo span { font-size: 1.35rem; }
+  .modal-conteudo { grid-template-columns: 1fr 1fr; }
+  .modal-imagem { aspect-ratio: auto; min-height: 380px; }
+  .modal-texto { padding: 2rem 1.8rem; }
+  .contagem { gap: 1rem; }
+  .sobre-bloco { grid-template-columns: 1fr 1fr; gap: 3rem; }
+}
+
+/* ---------------------------------------------------------------------
+   DESKTOP — a partir de 992px
+   O menu hambúrguer some e os links ficam em linha (Flexbox).
+   --------------------------------------------------------------------- */
+@media (min-width: 992px) {
+  :root { --altura-topo: 78px; }
+
+  .menu-toggle { display: none; }
+  .menu {
+    display: flex; position: static; flex-direction: row; gap: .2rem;
+    background: none; border: 0; box-shadow: none; padding: 0; animation: none;
+  }
+  .menu a { padding: .6rem .9rem; border-bottom: 0; font-size: .82rem; }
+  .menu a::after { left: .9rem; bottom: .2rem; }
+  .menu a:hover::after, .menu a.ativo::after { width: calc(100% - 1.8rem); }
+  .botao-pedido { display: inline-flex; }
+
+  .grade-produtos { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }   /* 4 colunas */
+  .grade-links { grid-template-columns: repeat(4, 1fr); }
+  .grade-cartoes.tres { grid-template-columns: repeat(3, 1fr); }
+  .grade-cartoes.quatro { grid-template-columns: repeat(4, 1fr); }
+  .filtros { grid-template-columns: 2fr 1fr; padding: 1.3rem 1.5rem; }
+  .galeria-grade { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; }
+  .carrossel { aspect-ratio: 21 / 9; }
+  .slide-legenda { padding: 4rem 3rem 3.4rem; }
+  .contato-layout { grid-template-columns: 1.25fr 1fr; gap: 2.5rem; }
+  .rodape-grade { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; }
+  .rodape-base { padding-bottom: 1.5rem; }
+  .sobre-bloco.inverso .sobre-foto { order: 2; }
+  .hero { padding-bottom: 8rem; }
+  .linha-tempo { padding-left: 0; }
+  .linha-tempo::before { left: 50%; transform: translateX(-50%); }
+  .marco { width: 50%; padding: 0 2.5rem 2rem 0; text-align: right; }
+  .marco::before { left: auto; right: -9px; }
+  .marco:nth-child(even) { margin-left: 50%; padding: 0 0 2rem 2.5rem; text-align: left; }
+  .marco:nth-child(even)::before { right: auto; left: -9px; }
+  .chamada-home { background-attachment: fixed; }   /* parallax em CSS puro */
+}
+
+/* telas muito pequenas (menos de 400px) */
+@media (max-width: 399px) {
+  .logo span { font-size: 1.05rem; }
+  .logo img { height: 42px; }
+  .contagem { gap: .4rem; }
+  .musica-btn span.rotulo { display: none; }
+  .musica-btn { padding: 0 .9rem; }
+  .card-botoes { flex-direction: column; }
+  .titulo-pagina::before, .titulo-pagina::after { opacity: .5; }
+}
+
+/* telas grandes (1400px+) */
+@media (min-width: 1400px) {
+  :root { --largura: 1280px; }
+}
+
+/* impressão: tira elementos decorativos */
+@media print {
+  .topo, .rodape, .whatsapp, .voltar-topo, .musica-btn, #neve, .carrinho-painel { display: none !important; }
+  body { background: #fff; }
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vithiana Coffee — O sabor da magia está no Natal</title>
+  <meta name="description" content="Vithiana Coffee: cafeteria natalina com 50 produtos entre cafés, bebidas, doces e salgados. Conheça nossa coleção de Natal.">
+  <meta name="theme-color" content="#173D2B">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- Fontes do Google: Playfair Display (títulos) e Poppins (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- CSS: primeiro o visual base (celular), depois as regras para telas maiores -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+  <header class="topo">
+    <div class="container topo-interno">
+      <a class="logo" href="index.html" aria-label="Vithiana Coffee — página inicial">
+        <img src="img/logo.png" alt="Logo da Vithiana Coffee" width="56" height="56">
+        <span>Vithiana <b>Coffee</b></span>
+      </a>
+      <nav id="menu" class="menu" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="sobreacafeteria.html">Sobre nós</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="acoes-topo">
+        <a class="botao botao-dourado botao-pequeno botao-pedido" href="https://wa.me/5519996888532" target="_blank" rel="noopener">Faça seu pedido</a>
+        <button type="button" class="btn-carrinho" aria-label="Abrir carrinho">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h-2l-1 2H2v2h1.6l2.7 8.6A2 2 0 0 0 8.2 18h8.6a2 2 0 0 0 1.9-1.4L21 8H6.2l-.5-2zM9 20a1.5 1.5 0 1 0 0 .01zM17 20a1.5 1.5 0 1 0 0 .01z"/></svg>
+          <span class="contagem-carrinho" aria-live="polite">0</span>
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="luzes" aria-hidden="true"></div>
+  </header>
+
+  <main id="conteudo">
+    <!-- BANNER PRINCIPAL com parallax -->
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="hero-camadas" aria-hidden="true">
+        <img class="camada" data-velocidade="0.05" src="img/banners/hero-ceu.jpg" alt="" width="1920" height="1200">
+        <img class="camada" data-velocidade="0.18" src="img/banners/hero-montanhas.png" alt="" width="1920" height="1200">
+        <img class="camada" data-velocidade="0.34" src="img/banners/hero-pinheiros.png" alt="" width="1920" height="1200">
+        <img class="camada" data-velocidade="0.5" src="img/banners/hero-neve.png" alt="" width="1920" height="1200">
+      </div>
+      <div class="container hero-conteudo">
+        <p class="sobretitulo">NATAL VITHIANA COFFEE</p>
+        <h1 id="titulo-hero">O sabor da magia <em>está no Natal.</em></h1>
+        <p class="lead">Descubra nossa coleção especial de cafés, bebidas e doces natalinos.</p>
+        <div class="hero-botoes">
+          <a href="produtos.html" class="botao botao-dourado botao-pulsa">Explorar produtos</a>
+          <a href="sobreacafeteria.html" class="botao botao-contorno-claro">Nossa história</a>
+        </div>
+      </div>
+      <a class="rolar-hint" href="#sabores" aria-label="Rolar para baixo"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
+    </section>
+
+    <div class="faixa" aria-hidden="true"><div class="faixa-trilho"><span>Natal Vithiana Coffee</span><span>Café quentinho, coração aquecido</span><span>50 sabores para o seu Natal</span><span>Feito com carinho</span><span>Doces momentos de Natal</span><span>Natal Vithiana Coffee</span><span>Café quentinho, coração aquecido</span><span>50 sabores para o seu Natal</span><span>Feito com carinho</span><span>Doces momentos de Natal</span></div></div>
+
+    <!-- CARROSSEL automático -->
+    <section class="secao" id="sabores" aria-labelledby="t-carrossel">
+      <div class="container">
+        <div class="cabecalho-secao revelar">
+          <p class="sobretitulo">EDIÇÃO ESPECIAL</p>
+          <h2 id="t-carrossel">Descubra nossos sabores</h2>
+          <div class="divisor" aria-hidden="true"><i></i></div>
+          <p>O Natal fica ainda mais gostoso com a Vithiana.</p>
+        </div>
+        <div id="carrossel" class="carrossel revelar" role="region" aria-roledescription="carrossel" aria-label="Destaques da Vithiana" tabindex="0">
+        <figure class="slide ativo">
+          <img src="img/banners/slide-cafe-natalino.jpg" alt="Café natalino com especiarias" width="1600" height="700">
+          <figcaption class="slide-legenda"><h3>Um café cheio de carinho</h3><p>Momentos especiais começam aqui.</p></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="img/banners/slide-doces-natalinos.jpg" alt="Doces natalinos em uma mesa decorada" width="1600" height="700" loading="lazy">
+          <figcaption class="slide-legenda"><h3>Doces momentos de Natal</h3><p>Sabores feitos para compartilhar.</p></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="img/banners/slide-sobremesas-especiais.jpg" alt="Sobremesas especiais de Natal" width="1600" height="700" loading="lazy">
+          <figcaption class="slide-legenda"><h3>O encanto está nos detalhes</h3><p>Experimente nossas delícias.</p></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="img/banners/slide-chocolates-quentes.jpg" alt="Chocolates quentes com chantilly" width="1600" height="700" loading="lazy">
+          <figcaption class="slide-legenda"><h3>Chocolate quente para aquecer</h3><p>Cremoso, com chantilly e muito aconchego.</p></figcaption>
+        </figure>
+          <button type="button" class="seta anterior" aria-label="Slide anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="seta proximo" aria-label="Próximo slide"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+          <div id="indicadores" class="indicadores"></div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- CHAMADA -->
+    <section class="chamada-home" aria-labelledby="t-chamada">
+      <div class="container revelar">
+        <p class="sobretitulo">NOSSO CARDÁPIO</p> <!-- PRODUTOS EM DESTAQUE (cards criados pelo JavaScript a partir do array) -->
+    <section class="secao secao-clara" aria-labelledby="t-destaques">
+      <div class="container">
+        <div class="cabecalho-secao revelar">
+          <p class="sobretitulo">ESCOLHIDOS PARA VOCÊ</p>
+          <h2 id="t-destaques">Nossos destaques</h2>
+          <div class="divisor" aria-hidden="true"><i></i></div>
+          <p>Conheça os queridinhos da Vithiana Coffee.</p>
+        </div>
+        <div id="produtosDestaque" class="grade-produtos"></div>
+        <p style="text-align:center;margin:2.2rem 0 0"><a href="produtos.html" class="botao">Ver todos os produtos</a></p>
+      </div>
+    </section>
+        <span class="numero-grande" aria-hidden="true">50</span>
+        <h2 id="t-chamada">Qual será seu próximo sabor favorito?</h2>
+        <p>São 50 opções especiais esperando por você.</p>
+        <a href="produtos.html" class="botao botao-dourado">Acessar produtos</a>
+      </div>
+    </section>
+
+    <!-- LINKS PARA AS OUTRAS PÁGINAS -->
+    <section class="secao" aria-labelledby="t-explore">
+      <div class="container">
+        <div class="cabecalho-secao revelar">
+          <p class="sobretitulo">EXPLORE A VITHIANA</p>
+          <h2 id="t-explore">Conheça nossa cafeteria</h2>
+          <div class="divisor" aria-hidden="true"><i></i></div>
+        </div>
+        <div class="grade-links">
+        <a class="link-card revelar" style="--atraso:0.0s" href="produtos.html">
+          <span class="icone-grande" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 9h1.5a2.5 2.5 0 0 1 0 5H17v-1.6h1.5a.9.9 0 0 0 0-1.8H17zM8 2c1 1 1 2 0 3M12 2c1 1 1 2 0 3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/></svg></span>
+          <h3>Produtos</h3>
+          <p>Conheça nossos 50 produtos.</p>
+        </a>
+        <a class="link-card revelar" style="--atraso:0.1s" href="sobreacafeteria.html">
+          <span class="icone-grande" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg></span>
+          <h3>Sobre nós</h3>
+          <p>Descubra nossa história.</p>
+        </a>
+        <a class="link-card revelar" style="--atraso:0.2s" href="galeria.html">
+          <span class="icone-grande" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 4l-1.5 2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3.5L15 4zM12 9a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9z"/></svg></span>
+          <h3>Galeria</h3>
+          <p>Veja nossa coleção natalina.</p>
+        </a>
+        <a class="link-card revelar" style="--atraso:0.30000000000000004s" href="contato.html">
+          <span class="icone-grande" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.5 2L12 12.5 19.5 7z"/></svg></span>
+          <h3>Contato</h3>
+          <p>Fale com nossa equipe.</p>
+        </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape">
+    <div class="container rodape-grade">
+      <div class="rodape-marca">
+        <div class="rodape-selo"><img src="img/logo.png" alt="Logo da Vithiana Coffee" width="70" height="70" loading="lazy"></div>
+        <h2>Vithiana Coffee</h2>
+        <p>Cafés, doces e muito carinho para o seu Natal.</p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <h3>Navegue</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobreacafeteria.html">Sobre nós</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Fale com a gente</h3>
+        <ul>
+          <li>WhatsApp: <a href="https://wa.me/5519996888532" target="_blank" rel="noopener">(19) 99668-8532</a></li>
+          <li>Rua das Flores, 100 — Centro<br><small>(endereço fictício)</small></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Siga a Vithiana</h3>
+        <div class="rodape-social">
+          <a href="https://wa.me/5519996888532" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 13.6c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.2.1.8-.1 1.4z"/></svg></a>
+          <a href="https://www.instagram.com/vithianacoffee" target="_blank" rel="noopener" aria-label="Instagram @vithianacoffee"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 5.8a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
+        </div>
+        <p style="margin-top:.8rem">@vithianacoffee</p>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <div class="container">
+        <p>© 2026 Vithiana Coffee — projeto acadêmico (AV2 Desenvolvimento Web) · Colégio UNASP · Técnico em Informática.</p>
+        <p>Loja, endereço e produtos fictícios, criados para fins educacionais.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CARRINHO (painel lateral) ===== -->
+  <div id="carrinhoFundo" class="carrinho-fundo"></div>
+  <aside id="carrinhoPainel" class="carrinho-painel" aria-hidden="true" aria-labelledby="tituloCarrinho">
+    <div class="carrinho-topo">
+      <h2 id="tituloCarrinho">Seu carrinho</h2>
+      <button type="button" id="fecharCarrinho" class="btn-fechar" aria-label="Fechar carrinho">&times;</button>
+    </div>
+    <div id="carrinhoLista" class="carrinho-lista"></div>
+    <div class="carrinho-rodape">
+      <p class="carrinho-total"><span>Total</span> <strong id="carrinhoTotal">R$ 0,00</strong></p>
+      <button type="button" id="finalizarPedido" class="botao botao-whats">Finalizar pelo WhatsApp</button>
+      <button type="button" id="limparCarrinho" class="btn-limpar">Esvaziar carrinho</button>
+    </div>
+  </aside>
+
+  <!-- ===== MODAL DE DETALHES DO PRODUTO ===== -->
+  <div id="modalProduto" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalNome">
+    <div class="modal-conteudo">
+      <button type="button" class="btn-fechar" data-fechar aria-label="Fechar detalhes">&times;</button>
+      <div class="modal-imagem"><img id="modalImagem" src="img/logo.png" alt=""></div>
+      <div class="modal-texto">
+        <span id="modalCategoria" class="badge-categoria"></span>
+        <h2 id="modalNome"></h2>
+        <p id="modalDescricao"></p>
+        <span id="modalPreco" class="preco"></span>
+        <p id="modalCodigo" class="modal-codigo"></p>
+        <div class="modal-acoes">
+          <button type="button" id="modalAdicionar" class="botao">Adicionar ao carrinho</button>
+          <button type="button" class="botao botao-contorno" data-fechar>Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ELEMENTOS FLUTUANTES: neve, música, WhatsApp, voltar ao topo ===== -->
+  <canvas id="neve" aria-hidden="true"></canvas>
+  <button type="button" id="btnMusica" class="musica-btn" aria-pressed="false" aria-label="Ligar ou desligar a música de Natal">
+    <span class="equalizador" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="rotulo">Música: desligada</span>
+  </button>
+  <a class="whatsapp" href="https://wa.me/5519996888532" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 13.6c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.2.1.8-.1 1.4z"/></svg></a>
+  <button type="button" id="voltarTopo" class="voltar-topo" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+  </button>
+
+  <!-- produtos.js PRIMEIRO (cria o array "produtos"), depois script.js (usa o array) -->
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

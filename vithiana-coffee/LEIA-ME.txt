@@ -1,0 +1,76 @@
+
+ AV2 — DESENVOLVIMENTO WEB  |  VITHIANA COFFEE (Edição de Natal)
+ Colégio UNASP — 1º ano do Ti
+ Professor: Samuel 
+
+
+LOJA : Vithiana Coffee (cafeteria natalina fictícia)
+SEGMENTO : Cafeteria — cafés, bebidas, doces, salgados e natalinos
+TURMA: turma 1tid
+
+INTEGRANTES (nome completo e número)
+  1. Vitor Bollinelli Pinheiro do Nascimento
+  2. Jhennifer : Jhennifer Rhianna Brito
+  
+
+LINKS 
+Vídeo no YouTube : 
+
+
+ PÁGINAS
+
+  index.html ............ Home (página inicial do GitHub Pages)
+  menu.html ............. Capa opcional (o site NÃO depende dela)
+  produtos.html ......... 50 produtos, busca, filtro, modal, carrinho
+  sobreacafeteria.html .. História, missão/visão/valores, equipe, contagem
+  galeria.html .......... Galeria com lightbox
+  contato.html .......... Formulário validado + envio por WhatsApp
+
+ ESTRUTURA
+  css/style.css  css/responsivo.css
+  js/produtos.js (array com os 50 produtos)  js/script.js
+  img/ (logo, favicon, banners/, produtos/, galeria/)
+  audio/ (musica-natal.mp3, sino.mp3)
+
+
+ FUNCIONALIDADES EM JAVASCRIPT
+
+ Obrigatórias
+  1. Carrossel automático com setas, indicadores, pausa no hover e swipe
+  2. Parallax com evento scroll (4 camadas em velocidades diferentes)
+  3. Sons: música (só inicia por clique, volume 0.25, sem erro se faltar
+     o MP3) e sininho nos cliques
+  4. Cards dinâmicos gerados do array de 50 produtos
+  5. Filtro por categoria e busca por nome (instantâneos, sem acentos)
+ Extras
+  6. Carrinho com localStorage (adicionar, remover, quantidade, total,
+     contador) e finalização por WhatsApp
+  7. Contagem regressiva para o Natal (atualiza a cada segundo)
+  8. Validação do formulário de contato
+  9. Menu hambúrguer
+ 10. Modal de detalhes do produto
+ 11. Lightbox da galeria (setas, Esc, filtro por tema)
+ 12. Neve em canvas
+ 13. Animação ao rolar (IntersectionObserver)
+ 14. Botão voltar ao topo
+
+
+
+ CRÉDITOS DE IMAGENS E SONS
+
+ - Logo: criada pela equipe ( fizemos varias combinações e alteramos com IA ).
+ - Todas as imagens de produtos, banners e galeria são ILUSTRAÇÕES
+   ORIGINAIS geradas por código com auxílio de IA. Não há fotos de terceiros, nem direitos de uso a creditar.
+ - Música e sino: sintetizados por código sobre melodias tradicionais de
+   domínio público (cantigas de Natal).
+ - Fontes: Playfair Display e Poppins (Google Fonts, licença OFL).
+ - Endereço, horários, história e loja são FICTÍCIOS (fins acadêmicos).
+
+Imagens que PODEM TROCAR por fotos reais livres:
+ as ilustrações em img/produtos/, img/galeria/ e img/banners/ funcionam
+ como estão. Para trocar, mantenha o MESMO nome de arquivo (minúsculas,
+ sem acentos) e use 600x600 px (produtos) com até 200 KB.
+ Fontes livres sugeridas: Unsplash, Pexels, Pixabay (citar o autor aqui).
+
+
+ 

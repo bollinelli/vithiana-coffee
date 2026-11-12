@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo — Vithiana Coffee</title>
+  <meta name="description" content="Página de entrada da Vithiana Coffee, cafeteria natalina. Entre na loja e conheça nossos 50 produtos.">
+  <meta name="theme-color" content="#173D2B">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- Fontes do Google: Playfair Display (títulos) e Poppins (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- CSS: primeiro o visual base (celular), depois as regras para telas maiores -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+  <main id="conteudo">
+    <section class="hero capa" aria-labelledby="titulo-capa">
+      <div class="hero-camadas" aria-hidden="true">
+        <img class="camada" data-velocidade="0.05" src="img/banners/hero-ceu.jpg" alt="" width="1920" height="1200">
+        <img class="camada" data-velocidade="0.18" src="img/banners/hero-montanhas.png" alt="" width="1920" height="1200">
+        <img class="camada" data-velocidade="0.34" src="img/banners/hero-pinheiros.png" alt="" width="1920" height="1200">
+        <img class="camada" data-velocidade="0.5" src="img/banners/hero-neve.png" alt="" width="1920" height="1200">
+      </div>
+      <div class="container hero-conteudo">
+        <div class="capa-marca"><img src="img/logo.png" alt="Logo da Vithiana Coffee" width="156" height="156"></div>
+        <p class="sobretitulo">BEM-VINDO À</p>
+        <h1 id="titulo-capa">Vithiana Coffee <em>Edição de Natal</em></h1>
+        <p class="lead">Aqui o café é quentinho, os doces são feitos com carinho e o Natal chega mais cedo. Entre e escolha o seu sabor favorito.</p>
+        <div class="hero-botoes"><a href="index.html" class="botao botao-dourado botao-pulsa">Entrar na loja</a></div>
+        <small>Projeto acadêmico</small>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ELEMENTOS FLUTUANTES: neve, música, WhatsApp, voltar ao topo ===== -->
+  <canvas id="neve" aria-hidden="true"></canvas>
+  <button type="button" id="btnMusica" class="musica-btn" aria-pressed="false" aria-label="Ligar ou desligar a música de Natal">
+    <span class="equalizador" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="rotulo">Música: desligada</span>
+  </button>
+  <button type="button" id="voltarTopo" class="voltar-topo" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+  </button>
+
+  <!-- produtos.js PRIMEIRO (cria o array "produtos"), depois script.js (usa o array) -->
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos — Vithiana Coffee</title>
+  <meta name="description" content="Veja os 50 produtos da Vithiana Coffee: busque por nome, filtre por categoria, veja detalhes e monte seu pedido.">
+  <meta name="theme-color" content="#173D2B">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <!-- Fontes do Google: Playfair Display (títulos) e Poppins (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- CSS: primeiro o visual base (celular), depois as regras para telas maiores -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===== CABEÇALHO (igual em todas as páginas) ===== -->
+  <header class="topo">
+    <div class="container topo-interno">
+      <a class="logo" href="index.html" aria-label="Vithiana Coffee — página inicial">
+        <img src="img/logo.png" alt="Logo da Vithiana Coffee" width="56" height="56">
+        <span>Vithiana <b>Coffee</b></span>
+      </a>
+      <nav id="menu" class="menu" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="sobreacafeteria.html">Sobre nós</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="acoes-topo">
+        <a class="botao botao-dourado botao-pequeno botao-pedido" href="https://wa.me/5519996888532" target="_blank" rel="noopener">Faça seu pedido</a>
+        <button type="button" class="btn-carrinho" aria-label="Abrir carrinho">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h-2l-1 2H2v2h1.6l2.7 8.6A2 2 0 0 0 8.2 18h8.6a2 2 0 0 0 1.9-1.4L21 8H6.2l-.5-2zM9 20a1.5 1.5 0 1 0 0 .01zM17 20a1.5 1.5 0 1 0 0 .01z"/></svg>
+          <span class="contagem-carrinho" aria-live="polite">0</span>
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="luzes" aria-hidden="true"></div>
+  </header>
+
+  <main id="conteudo">
+    <section class="titulo-pagina">
+      <div class="container">
+        <p class="sobretitulo">NOSSO CARDÁPIO</p>
+        <h1>Produtos da Vithiana</h1>
+        <p>Cafés, bebidas, doces, salgados e novidades natalinas. Procure pelo nome ou filtre por categoria.</p>
+      </div>
+    </section>
+
+    <section class="secao" aria-label="Lista de produtos">
+      <div class="container">
+        <!-- Filtros: a busca e a categoria atualizam a lista na hora (sem apertar botão) -->
+        <form id="formFiltros" class="filtros" role="search" aria-label="Buscar produtos">
+          <div>
+            <label for="busca">Buscar produto</label>
+            <input type="search" id="busca" placeholder="Ex.: chocolate, café, bolo…" autocomplete="off">
+          </div>
+          <div>
+            <label for="categoria">Categoria</label>
+            <select id="categoria"><option value="todas">Todas as categorias</option></select>
+          </div>
+        </form>
+        <div class="filtros-status">
+          <p id="contador" class="contador" aria-live="polite">Carregando produtos…</p>
+          <button type="button" id="limparFiltros" class="btn-limpar" hidden>Limpar filtros</button>
+        </div>
+        <div id="gradeProdutos" class="grade-produtos"></div>
+        <div id="semResultados" class="sem-resultados" hidden>
+          <span class="boneco" aria-hidden="true">⛄</span>
+          <strong>Nenhum produto encontrado</strong>
+          <p>Tente outra palavra ou escolha outra categoria.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape">
+    <div class="container rodape-grade">
+      <div class="rodape-marca">
+        <div class="rodape-selo"><img src="img/logo.png" alt="Logo da Vithiana Coffee" width="70" height="70" loading="lazy"></div>
+        <h2>Vithiana Coffee</h2>
+        <p>Cafés, doces e muito carinho para o seu Natal.</p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <h3>Navegue</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobreacafeteria.html">Sobre nós</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Fale com a gente</h3>
+        <ul>
+          <li>WhatsApp: <a href="https://wa.me/5519991591344" target="_blank" rel="noopener">(19) 99159-1344</a></li>
+          <li>Rua das Flores, 100 — Centro<br><small>(endereço fictício)</small></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Siga a Vithiana</h3>
+        <div class="rodape-social">
+          <a href="https://wa.me/5519996888532" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 13.6c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.2.1.8-.1 1.4z"/></svg></a>
+          <a href="https://www.instagram.com/vithianacoffee" target="_blank" rel="noopener" aria-label="Instagram @vithianacoffee"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 5.8a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
+        </div>
+        <p style="margin-top:.8rem">@vithianacoffee</p>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <div class="container">
+        <p>© 2026 Vithiana Coffee — projeto acadêmico (AV2 Desenvolvimento Web) · Colégio UNASP · Técnico em Informática.</p>
+        <p>Loja, endereço e produtos fictícios, criados para fins educacionais.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CARRINHO (painel lateral) ===== -->
+  <div id="carrinhoFundo" class="carrinho-fundo"></div>
+  <aside id="carrinhoPainel" class="carrinho-painel" aria-hidden="true" aria-labelledby="tituloCarrinho">
+    <div class="carrinho-topo">
+      <h2 id="tituloCarrinho">Seu carrinho</h2>
+      <button type="button" id="fecharCarrinho" class="btn-fechar" aria-label="Fechar carrinho">&times;</button>
+    </div>
+    <div id="carrinhoLista" class="carrinho-lista"></div>
+    <div class="carrinho-rodape">
+      <p class="carrinho-total"><span>Total</span> <strong id="carrinhoTotal">R$ 0,00</strong></p>
+      <button type="button" id="finalizarPedido" class="botao botao-whats">Finalizar pelo WhatsApp</button>
+      <button type="button" id="limparCarrinho" class="btn-limpar">Esvaziar carrinho</button>
+    </div>
+  </aside>
+
+  <!-- ===== MODAL DE DETALHES DO PRODUTO ===== -->
+  <div id="modalProduto" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalNome">
+    <div class="modal-conteudo">
+      <button type="button" class="btn-fechar" data-fechar aria-label="Fechar detalhes">&times;</button>
+      <div class="modal-imagem"><img id="modalImagem" src="img/logo.png" alt=""></div>
+      <div class="modal-texto">
+        <span id="modalCategoria" class="badge-categoria"></span>
+        <h2 id="modalNome"></h2>
+        <p id="modalDescricao"></p>
+        <span id="modalPreco" class="preco"></span>
+        <p id="modalCodigo" class="modal-codigo"></p>
+        <div class="modal-acoes">
+          <button type="button" id="modalAdicionar" class="botao">Adicionar ao carrinho</button>
+          <button type="button" class="botao botao-contorno" data-fechar>Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ELEMENTOS FLUTUANTES: neve, música, WhatsApp, voltar ao topo ===== -->
+  <canvas id="neve" aria-hidden="true"></canvas>
+  <button type="button" id="btnMusica" class="musica-btn" aria-pressed="false" aria-label="Ligar ou desligar a música de Natal">
+    <span class="equalizador" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="rotulo">Música: desligada</span>
+  </button>
+  <a class="whatsapp" href="https://wa.me/5519991591344" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 13.6c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.2.1.8-.1 1.4z"/></svg></a>
+  <button type="button" id="voltarTopo" class="voltar-topo" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+  </button>
+
+  <!-- produtos.js PRIMEIRO (cria o array "produtos"), depois script.js (usa o array) -->
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
